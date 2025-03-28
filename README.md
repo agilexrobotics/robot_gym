@@ -6,7 +6,7 @@ piper on isaacgym. based on https://github.com/aCodeDog/legged-robots-manipulati
 
 ### install isaac_gym,rsl_rl,legged_gym
 
-1. You are supposed to install the isaac_gym,rsl_rl and legged_gym.Please install the above dependencies ([Isaac Gym Preview 4](https://developer.nvidia.com/isaac-gym), [rsl_rl](https://github.com/leggedrobotics/rsl_rl), [legged_gym](https://github.com/leggedrobotics/legged_gym/tree/master)) as described in [legged_gym](https://github.com/leggedrobotics/legged_gym/tree/master).
+1. You are supposed to install the cuda11.8, isaac_gym,rsl_rl and legged_gym.Please install the above dependencies ([Isaac Gym Preview 4](https://developer.nvidia.com/isaac-gym), [rsl_rl](https://github.com/leggedrobotics/rsl_rl), [legged_gym](https://github.com/leggedrobotics/legged_gym/tree/master)) as described in [legged_gym](https://github.com/leggedrobotics/legged_gym/tree/master).
 
 
 
@@ -15,9 +15,13 @@ piper on isaacgym. based on https://github.com/aCodeDog/legged-robots-manipulati
 
 
 ```
-cd legged-robots-manipulation
+wget https://download.pytorch.org/whl/cu118/torch-2.1.1%2Bcu118-cp38-cp38-linux_x86_64.whl
+wget https://download.pytorch.org/whl/cu118/torchvision-0.16.1%2Bcu118-cp38-cp38-linux_x86_64.whl
+pip install torch-2.1.1+cu118-cp38-cp38-linux_x86_64.whl torchvision-0.16.1+cu118-cp38-cp38-linux_x86_64.whl
+cd rsl_rl
 pip install -e .
-
+cd ..
+pip install -e .
 ```
 
 
