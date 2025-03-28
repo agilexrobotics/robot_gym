@@ -4,7 +4,7 @@ Stephen Brawner (brawner@gmail.com)
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="go2_arx_description">
+  name="go2_piper_description">
   <link
     name="base">
     <inertial>
@@ -1231,18 +1231,18 @@ Stephen Brawner (brawner@gmail.com)
   <link
     name="arm_link00">
     <inertial>
-      <origin
-        xyz="-0.00973928490005031 1.8312708928633E-06 0.0410140167677137"
+      <origin 
+        xyz="-0.00473641164191482 2.56829134630247E-05 0.041451518036016" 
         rpy="0 0 0" />
-      <mass
-        value="0.162352169522719" />
-      <inertia
-        ixx="0.000226592553127906"
-        ixy="-7.33974356968813E-08"
-        ixz="2.13221970218123E-06"
-        iyy="0.000269447877479622"
-        iyz="8.15167478685076E-09"
-        izz="0.000222318286704" />
+      <mass 
+        value="1.02" />
+      <inertia 
+        ixx="0.00267433" 
+        ixy="-0.00000073" 
+        ixz="-0.00017389" 
+        iyy="0.00282612" 
+        iyz="0.0000004" 
+        izz="0.00089624" />
     </inertial>
     <visual>
       <origin
@@ -1271,18 +1271,18 @@ Stephen Brawner (brawner@gmail.com)
   <link
     name="arm_link01">
     <inertial>
-      <origin
-        xyz="0.00131676031927021 0.000310288842008364 -0.00922874512303438"
+      <origin 
+        xyz="0.000121504734057468 0.000104632162460536 -0.00438597309559853" 
         rpy="0 0 0" />
-      <mass
-        value="0.0978679932242825" />
-      <inertia
-        ixx="7.76684558296781E-05"
-        ixy="1.09084650459916E-07"
-        ixz="-1.97480532432411E-06"
-        iyy="9.24967780161546E-05"
-        iyz="9.91284646834672E-07"
-        izz="8.24589062407806E-05" />
+      <mass 
+        value="0.71" />
+      <inertia 
+        ixx="0.00048916" 
+        ixy="-0.00000036" 
+        ixz="-0.00000224" 
+        iyy="0.00040472" 
+        iyz="-0.00000242" 
+        izz="0.00043982" />
     </inertial>
     <visual>
       <origin
@@ -1308,13 +1308,12 @@ Stephen Brawner (brawner@gmail.com)
       </geometry>
     </collision>
   </link>
-
   <joint
     name="arm_joint00"
     type="revolute">
     <origin
       xyz="0 0 0.123"
-      rpy="0 0 -1.5708" />
+      rpy="0 0 0" />
     <parent
       link="arm_link00" />
     <child
@@ -1323,25 +1322,25 @@ Stephen Brawner (brawner@gmail.com)
       xyz="0 0 1" />
     <limit
       lower="-2.618"
-      upper="2.618"
+      upper="2.168"
       effort="100"
-      velocity="2" />
+      velocity="5" />
   </joint>
   <link
     name="arm_link02">
     <inertial>
-      <origin
-        xyz="0.147615838821413 -0.0174259998251393 0.00175952516190707"
+      <origin 
+        xyz="0.198666145229743 -0.010926924140076 0.00142121714502687" 
         rpy="0 0 0" />
-      <mass
-        value="0.289571136953082" />
-      <inertia
-        ixx="0.000150112628108228"
-        ixy="8.58974959950769E-05"
-        ixz="-1.07428153464285E-06"
-        iyy="0.00172585302855383"
-        iyz="-9.93704792239686E-07"
-        izz="0.00177445942914759" />
+      <mass 
+        value="1.17" />
+      <inertia 
+        ixx="0.00116918" 
+        ixy="-0.00180037" 
+        ixz="0.00025146" 
+        iyy="0.06785384" 
+        iyz="-0.00000455" 
+        izz="0.06774489" />
     </inertial>
     <visual>
       <origin
@@ -1372,7 +1371,8 @@ Stephen Brawner (brawner@gmail.com)
     type="revolute">
     <origin
       xyz="0 0 0"
-      rpy="1.5708 -0.10095 -1.5708" />
+      rpy="1.5708 -0.1359 -3.1416" />
+      <!-- rpy="1.5708 -0.10095-0.03490659 -3.1416" /> -->
     <parent
       link="arm_link01" />
     <child
@@ -1383,23 +1383,23 @@ Stephen Brawner (brawner@gmail.com)
       lower="0"
       upper="3.14"
       effort="100"
-      velocity="2" />
+      velocity="5" />
   </joint>
   <link
     name="arm_link03">
     <inertial>
-      <origin
-        xyz="0.0156727246030052 0.104466514905741 0.000508486764144372"
+      <origin 
+        xyz="-0.0202737662122021 -0.133914995944595 -0.000458682652737356" 
         rpy="0 0 0" />
-      <mass
-        value="0.290583247455324" />
-      <inertia
-        ixx="0.000221686352136266"
-        ixy="-7.57426543992343E-06"
-        ixz="-6.3700062772173E-07"
-        iyy="0.000100859162015934"
-        iyz="-8.16202696860781E-07"
-        izz="0.000241839316548946" />
+      <mass 
+        value="0.5" />
+      <inertia 
+        ixx="0.01361711" 
+        ixy="0.00165794" 
+        ixz="-0.00000048" 
+        iyy="0.00045024" 
+        iyz="-0.00000045" 
+        izz="0.01380322" />
     </inertial>
     <visual>
       <origin
@@ -1430,7 +1430,8 @@ Stephen Brawner (brawner@gmail.com)
     type="revolute">
     <origin
       xyz="0.28503 0 0"
-      rpy="0 0 1.3826" />
+      rpy="0 0 -1.7939" />
+      <!-- rpy="0 0 -1.759-0.03490659" /> -->
     <parent
       link="arm_link02" />
     <child
@@ -1441,23 +1442,23 @@ Stephen Brawner (brawner@gmail.com)
       lower="-2.967"
       upper="0"
       effort="100"
-      velocity="2" />
+      velocity="5" />
   </joint>
   <link
     name="arm_link04">
     <inertial>
-      <origin
-        xyz="0.000276464622388145 -0.00102803669324853 -0.00472830700561612"
+      <origin 
+        xyz="-9.66635791618542E-05 0.000876064475651083 -0.00496880904640868" 
         rpy="0 0 0" />
-      <mass
-        value="0.127087348341362" />
-      <inertia
-        ixx="3.82011730423098E-05"
-        ixy="-4.92358351033589E-08"
-        ixz="4.89589432983109E-08"
-        iyy="4.87048555222491E-05"
-        iyz="6.70802942486707E-08"
-        izz="4.10592077565155E-05" />
+      <mass 
+        value="0.38" />
+      <inertia 
+        ixx="0.00018501" 
+        ixy="0.00000054" 
+        ixz="0.00000120" 
+        iyy="0.00018965" 
+        iyz="-0.00000841" 
+        izz="0.00015484" />
     </inertial>
     <visual>
       <origin
@@ -1487,35 +1488,35 @@ Stephen Brawner (brawner@gmail.com)
     name="arm_joint03"
     type="revolute">
     <origin
-      xyz="0.021984 0.25075 0"
-      rpy="-1.5708 0 0" />
+      xyz="-0.021984 -0.25075 0"
+      rpy="1.5708 0 0" />
     <parent
       link="arm_link03" />
     <child
       link="arm_link04" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.832"
-      upper="1.832"
+      lower="-1.745"
+      upper="1.745"
       effort="100"
-      velocity="2" />
+      velocity="5" />
   </joint>
   <link
     name="arm_link05">
     <inertial>
-      <origin
-        xyz="8.82261259100015E-05 0.056682908434204 -0.00196119077436732"
+      <origin 
+        xyz="-4.10554118924211E-05 -0.0566486692356075 -0.0037205791677906" 
         rpy="0 0 0" />
-      <mass
-        value="0.144711209371719" />
-      <inertia
-        ixx="4.39644269159173E-05"
-        ixy="-3.59214840853815E-08"
-        ixz="-1.89785003257649E-08"
-        iyy="5.63173857792457E-05"
-        iyz="-2.15407623722543E-07"
-        izz="4.88713595021005E-05" />
+      <mass 
+        value="0.383" />
+      <inertia 
+        ixx="0.00166169" 
+        ixy="0.00000006" 
+        ixz="-0.00000007" 
+        iyy="0.00018510" 
+        iyz="0.00001026" 
+        izz="0.00164321" />
     </inertial>
     <visual>
       <origin
@@ -1546,7 +1547,7 @@ Stephen Brawner (brawner@gmail.com)
     type="revolute">
     <origin
       xyz="0 0 0"
-      rpy="1.5708 -0.087266 0" />
+      rpy="-1.5708 0 0" />
     <parent
       link="arm_link04" />
     <child
@@ -1557,23 +1558,23 @@ Stephen Brawner (brawner@gmail.com)
       lower="-1.22"
       upper="1.22"
       effort="100"
-      velocity="2" />
+      velocity="5" />
   </joint>
   <link
     name="gripper_link">
     <inertial>
-      <origin
-        xyz="9.41121070072333E-09 0.000341209775988838 0.0342122921883722"
+      <origin 
+        xyz="-8.82590762930069E-05 9.0598378529832E-06 -0.002" 
         rpy="0 0 0" />
-      <mass
-        value="0.150196458571266" />
-      <inertia
-        ixx="4.31750564711759E-05"
-        ixy="-2.21295720427027E-08"
-        ixz="-3.27825836857102E-12"
-        iyy="9.99756357365307E-05"
-        iyz="1.10337380549335E-07"
-        izz="0.000118282295533688" />
+      <mass 
+        value="0.00699089613564366" />
+      <inertia 
+        ixx="5.73015540542155E-07" 
+        ixy="-1.98305403089247E-22" 
+        ixz="-7.2791893904596E-23" 
+        iyy="5.73015540542155E-07" 
+        iyz="-3.4146026640245E-24" 
+        izz="1.06738869138926E-06" />
     </inertial>
     <visual>
       <origin
@@ -1586,7 +1587,7 @@ Stephen Brawner (brawner@gmail.com)
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -1603,36 +1604,86 @@ Stephen Brawner (brawner@gmail.com)
     name="arm_joint05"
     type="revolute">
     <origin
-      xyz="0 0.091 0.0014165"
-      rpy="-1.5708 -1.5708 0" />
+      xyz="8.8259E-05 -0.091 0"
+      rpy="1.5708 0 0" />
     <parent
       link="arm_link05" />
     <child
       link="gripper_link" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-2.0944"
+      upper="2.0944"
       effort="100"
-      velocity="2" />
+      velocity="3" />
   </joint>
-
+  <link
+    name="gripper_base">
+    <inertial>
+      <origin
+        xyz="-0.000183807162235591 8.05033155577911E-05 0.0321436689908876"
+        rpy="0 0 0" />
+      <mass
+        value="0.45" />
+      <inertia
+        ixx="0.00092934"
+        ixy="0.00000034"
+        ixz="-0.00000738"
+        iyy="0.00071447"
+        iyz="0.00000005"
+        izz="0.00039442" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/piper/gripper_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/piper/gripper_base.STL" />
+      </geometry>
+    </collision>
+  </link> 
+  <joint
+    name="joint6_to_gripper_base"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_link" />
+    <child
+      link="gripper_base" />
+  </joint>
   <link
     name="gripper_link_right">
     <inertial>
       <origin
-        xyz="-0.000277795893713934 -0.046767350270289 -0.00921029791141448"
+        xyz="0.00065123185041968 -0.0491929869131989 0.00972258769184025"
         rpy="0 0 0" />
       <mass
-        value="0.0264822500394006" />
+        value="0.025" />
       <inertia
-        ixx="9.99782519244544E-06"
-        ixy="-1.57547595978589E-07"
-        ixz="-2.71355785017816E-08"
-        iyy="6.17952364356547E-06"
-        iyz="-1.58939504838734E-06"
-        izz="1.42102253390315E-05" />
+        ixx="0.00007371"
+        ixy="-0.00000113"
+        ixz="0.00000021"
+        iyy="0.00000781"
+        iyz="-0.00001372"
+        izz="0.0000747" />
     </inertial>
     <visual>
       <origin
@@ -1662,36 +1713,35 @@ Stephen Brawner (brawner@gmail.com)
     name="arm_joint06"
     type="fixed">
     <origin
-      xyz="0 0 0.13503"
-      rpy="1.5708 0 1.5708" />
+      xyz="0 0 0.1358"
+      rpy="1.5708 0 0" />
     <parent
-      link="gripper_link" />
+      link="gripper_base" />
     <child
       link="gripper_link_right" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="0.0"
-      upper="0.04"
-      effort="100"
-      velocity="2" />
+      lower="0"
+      upper="0.035"
+      effort="10"
+      velocity="1" />
   </joint>
-
   <link
     name="gripper_link_left">
     <inertial>
       <origin
-        xyz="0.000277795911672651 0.0467673513153836 -0.00921029799058583"
+        xyz="0.000651231850419722 -0.0491929869131991 0.00972258769184024"
         rpy="0 0 0" />
       <mass
-        value="0.0264822490707451" />
+        value="0.025" />
       <inertia
-        ixx="9.99782474142963E-06"
-        ixy="-1.57547666236405E-07"
-        ixz="2.71355834243046E-08"
-        iyy="6.17952362333486E-06"
-        iyz="1.58939503259658E-06"
-        izz="1.42102248648757E-05" />
+        ixx="0.00007371"
+        ixy="-0.00000113"
+        ixz="0.00000021"
+        iyy="0.00000781"
+        iyz="-0.00001372"
+        izz="0.0000747" />
     </inertial>
     <visual>
       <origin
@@ -1721,19 +1771,18 @@ Stephen Brawner (brawner@gmail.com)
     name="arm_joint07"
     type="fixed">
     <origin
-      xyz="0 0 0.13503"
-      rpy="-1.5708 0 1.5708" />
+      xyz="0 0 0.1358"
+      rpy="1.5708 0 -3.1416" />
     <parent
-      link="gripper_link" />
+      link="gripper_base" />
     <child
       link="gripper_link_left" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-0.04"
-      upper="0.0"
-      effort="100"
-      velocity="2" />
+      lower="-0.035"
+      upper="0"
+      effort="10"
+      velocity="1" />
   </joint>
-
 </robot>

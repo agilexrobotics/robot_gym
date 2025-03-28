@@ -10,6 +10,6 @@ setup(
     author_email='wang_zifan@outlook.com',
     description='loco_manipulation lib  for Legged Robots',
     install_requires=['isaacgym',
-                      'rsl-rl',
+                      'numpy==1.22.0',
                       'matplotlib']
 )
